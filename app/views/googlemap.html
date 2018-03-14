@@ -1,0 +1,19 @@
+<div ng-controller="GoogleMapCtrl as gc" class="mapContainer" id="map-container">
+    <ng-map zoom="8" center="[40.74, -74.18]" default-style="true">
+        <custom-marker ng-repeat="p in gc.positions track by $index"
+        id="custom-marker-{{$index}}"
+        on-click="gc.map.showInfoWindow('foo', 'custom-marker-'+$index)"
+        position="{{p.pos}}">
+        <div class="icon">
+          {{p.name}}
+        </div>
+      </custom-marker>
+  
+      <info-window id="foo" on-mouseover="gc.mouseover()">
+        <div ng-non-bindable="">
+          Lat: {{anchor.getPosition().lat()}}<br/>
+          Lng: {{anchor.getPosition().lng()}}<br/>
+        </div>
+      </info-window>
+    </ng-map>
+</div>
