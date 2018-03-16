@@ -3,7 +3,7 @@
         <custom-marker ng-repeat="p in gc.positions track by $index"
         id="custom-marker-{{$index}}"
         on-click="gc.map.showInfoWindow('foo', 'custom-marker-'+$index)"
-        position="{{p.pos}}">
+        position="[{{p.lat}}, {{p.lng}}]">
         <div class="icon">
           {{p.name}}
         </div>

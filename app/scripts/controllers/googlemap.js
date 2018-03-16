@@ -14,6 +14,8 @@ angular.module('maptoolsApp')
 
         var init = function(){
             ctrl.positions = MarkerService.getPoints();
+
+           
             NgMap.getMap().then(function(map) {
                 ctrl.map = map;
               });
