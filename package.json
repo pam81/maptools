@@ -33,6 +33,7 @@
     "node": ">=0.10.0"
   },
   "dependencies": {
+    "angular-osm": "^1.2.2",
     "connect-modrewrite": "^0.10.2"
   }
 }

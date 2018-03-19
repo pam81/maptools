@@ -23,32 +23,10 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-
-            <a class="navbar-brand" href="/">maptools</a>
-          </div>
-
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
-
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="/">Home</a></li>
-              <li><a ng-href="/googlemap">GoogleMap</a></li>
-              <li><a ng-href="/mapbox">MapBox</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+    <div   ui-view='header' class="header">
+     
     </div>
+   
 
     <div class="container">
     <div ui-view='content'></div>
@@ -88,14 +66,22 @@
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/ngmap/build/scripts/ng-map.js"></script>
     <script src="bower_components/angular-mapboxgl-directive/dist/angular-mapboxgl-directive.min.js"></script>
+    <script src="bower_components/angular-esri-map/dist/angular-esri-map.js"></script>
     <!-- endbower -->
+  
     <!-- endbuild -->
-    
+    <script src="http://toutpt.github.io/angular-osm/dist/osm-api.js"></script>
+    <!-- load Esri JSAPI -->
+   <script src="https://js.arcgis.com/4.6"></script>
+   <script src="https://unpkg.com/angular-esri-map@2"></script>
+
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/googlemap.js"></script>
         <script src="scripts/controllers/mapbox.js"></script>
+        <script src="scripts/controllers/openmap.js"></script>
+        <script src="scripts/controllers/esri.js"></script>
         <script src="scripts/services.js"></script>
         <!-- endbuild -->
 </body>
