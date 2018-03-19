@@ -9,13 +9,13 @@
         <span class="icon-bar"></span>
     </button>
 
-    <a class="navbar-brand" href="/">maptools</a>
+    <a class="navbar-brand" ui-sref="/">maptools</a>
     </div>
 
     <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
     <ul class="nav navbar-nav">
-        <li ng-class="{active: ('/' | includedByState ) }"><a href="/">Home</a></li>
+        <li ng-class="{active: ('/' | includedByState ) }"><a ui-sref="/">Home</a></li>
         <li  ng-class="{active: ('googlemap' | includedByState ) }"><a ui-sref="googlemap">GoogleMap</a></li>
         <li ng-class="{active: ('mapbox' | includedByState ) }"><a  ui-sref="mapbox">MapBox</a></li>
         <li ng-class="{active: ('openmap' | includedByState ) }"><a  ui-sref="openmap">OpenStreetMap</a></li>

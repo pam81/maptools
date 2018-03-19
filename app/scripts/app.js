@@ -19,8 +19,7 @@ angular
     'ui.router',
     'ngMap',
     'mapboxgl-directive',
-    'osm.api',
-    'esri.map'
+    'leaflet-directive'
   ])
   .config(['$stateProvider','$urlRouterProvider','$locationProvider',
   function($stateProvider,$urlRouterProvider,$locationProvider) {
@@ -57,11 +56,6 @@ angular
    
   }
 ])
-.config(function (osmAPIProvider) {
-  osmAPIProvider.options = {
-    url: 'http://www.openstreetmap.org/api'
-  };
-})
 .run([function () {
   mapboxgl.accessToken = 'pk.eyJ1IjoicGFtODEiLCJhIjoiY2plcmw3YTc4MGh6cDMzcDl5cHFzZGdidyJ9.kx_3_3VpDKAJYs0yvXEsiw';
 }]);
